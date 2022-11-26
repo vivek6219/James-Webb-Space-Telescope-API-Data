@@ -1,0 +1,22 @@
+body {
+    background-color: #292B37
+}
+
+h1,
+p {
+    color: #9A7AD5;
+}
+
+h3 {
+    color: #707757;
+}
+
+#title,
+#info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

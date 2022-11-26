@@ -6,6 +6,7 @@ import com.jwst.api.service.AuthService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -71,6 +72,7 @@ public class ApiController {
         return response;
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/imagesList")
     public Mono<JpgData> returnImagesListWebClient() throws IOException {
         logger.info("Entering /images mapping");
@@ -87,7 +89,7 @@ public class ApiController {
                     .build()
                     .get()
                     .uri(imageUrl)
-                    .header("X-API-KEY", "REMOVED THIS")
+                    .header("X-API-KEY", "37a535b3-2943-4c70-9c1c-799c8b7b16cf")
                     .accept(MediaType.APPLICATION_JSON)
                     .retrieve()
                     .bodyToMono(JpgData.class)
