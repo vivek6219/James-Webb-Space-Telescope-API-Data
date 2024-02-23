@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.or">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Display</title>
+</head>
+<body>
+    <h1>Images</h1>
+        <ul>
+            <li th:each="imageList : ${imageLists}">
+                <img th:src="${imageList}" alt="Image" width="300" height="200" />
+            </li>
+        </ul>
+</body>
+</html>

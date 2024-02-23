@@ -1,0 +1,11 @@
+<p>server-request works!</p>
+
+
+<h2>Show all images</h2>
+<!-- <button onClick="displayImages()">Images</button> -->
+
+<div *ngFor="let i of getDisplayedImages()">
+    <img [src]="i" alt="Nasa Image">
+</div>
+
+<button (click)="displayNextImages()">Load Next 10 Images</button>
